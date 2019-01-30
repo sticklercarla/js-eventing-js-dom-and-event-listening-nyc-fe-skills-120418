@@ -31,6 +31,15 @@
 //   aDiv.addEventListener('click', bubble);
 // }
 
-
+divs = document.querySelectorAll('div')
+ 
+function capture(e) {
+  console.log(this.firstChild.nodeValue.trim() + ' captured')
+}
+ 
+for (const aDiv of divs) {
+  // set the third argument to `true`!
+  aDiv.addEventListener('click', capture, true)
+}
 
 
